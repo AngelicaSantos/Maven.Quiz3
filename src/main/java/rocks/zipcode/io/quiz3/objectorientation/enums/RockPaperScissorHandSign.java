@@ -1,16 +1,38 @@
 package rocks.zipcode.io.quiz3.objectorientation.enums;
 
+import javax.xml.bind.annotation.XmlType;
+
 /**
  * @author leon on 09/12/2018.
  */
 public enum RockPaperScissorHandSign {
-    ADD_ENUMERATIONS_HERE;
+    ROCK, PAPER, SCISSOR;
 
     public RockPaperScissorHandSign getWinner() {
-        return null;
+
+        switch (this) {
+            case ROCK:
+                return PAPER;
+            case PAPER:
+                return SCISSOR;
+            case SCISSOR:
+                return ROCK;
+            default:
+                throw new IllegalArgumentException("not a hand sign.");
+        }
     }
 
     public RockPaperScissorHandSign getLoser() {
-        return null;
+        switch (this) {
+            case ROCK:
+                return SCISSOR;
+            case PAPER:
+                return ROCK;
+            case SCISSOR:
+                return PAPER;
+            default:
+                throw new IllegalArgumentException("not a hand sign.");
+        }
     }
+
 }

@@ -1,5 +1,6 @@
 package rocks.zipcode.io.quiz3.collections;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,14 +8,19 @@ import java.util.List;
  */
 public class Student {
 
+    private List <Lab> labs;
+
     public Student() {
-        this(null);
+
+       labs= new ArrayList<>();
     }
 
     public Student(List<Lab> labs) {
+        this.labs=labs;
     }
 
     public Lab getLab(String labName) {
+
         return null;
     }
 
